@@ -12,8 +12,8 @@ TagManager:
   - Water
   - UI
   - SolidObjects
-  - 
-  - 
+  - Houses
+  - casual
   - 
   - 
   - 
@@ -47,6 +47,12 @@ TagManager:
   - name: Foreground
     uniqueID: 718539371
     locked: 0
+  - name: Houses
+    uniqueID: 31985817
+    locked: 0
   - name: npc_0
     uniqueID: 3936651543
+    locked: 0
+  - name: tree
+    uniqueID: 2968077233
     locked: 0
