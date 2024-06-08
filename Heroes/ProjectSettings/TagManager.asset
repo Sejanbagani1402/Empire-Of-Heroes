@@ -46,7 +46,7 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 718539371
-    locked: 0
+    locked: 1
   - name: Houses
     uniqueID: 31985817
     locked: 0
