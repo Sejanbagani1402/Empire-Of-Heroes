@@ -10,14 +10,32 @@ public class RandomMovement : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        SetRandomDestination();
+
+        // Ensure the agent is on the NavMesh
+        if (NavMesh.SamplePosition(transform.position, out NavMeshHit hit, 1.0f, NavMesh.AllAreas))
+        {
+            transform.position = hit.position;
+            agent.Warp(hit.position);  // Ensure the agent's internal state is updated
+            SetRandomDestination();
+        }
+        else
+        {
+            Debug.LogError("Agent is not on the NavMesh. Please place the agent on a walkable area.");
+        }
     }
 
     void Update()
     {
-        if (!agent.pathPending && agent.remainingDistance < 0.5f)
+        if (agent.isOnNavMesh)
         {
-            SetRandomDestination();
+            if (!agent.pathPending && agent.remainingDistance < 0.5f)
+            {
+                SetRandomDestination();
+            }
+        }
+        else
+        {
+            Debug.LogError("Agent is not on the NavMesh in Update");
         }
     }
 
@@ -25,9 +43,15 @@ public class RandomMovement : MonoBehaviour
     {
         Vector3 randomDirection = Random.insideUnitSphere * walkRadius;
         randomDirection += transform.position;
-        NavMeshHit hit;
-        NavMesh.SamplePosition(randomDirection, out hit, walkRadius, 1);
-        targetPoint = hit.position;
-        agent.SetDestination(targetPoint);
+        if (NavMesh.SamplePosition(randomDirection, out NavMeshHit hit, walkRadius, NavMesh.AllAreas))
+        {
+            targetPoint = hit.position;
+            agent.SetDestination(targetPoint);
+            Debug.Log("New Target Point: " + targetPoint);
+        }
+        else
+        {
+            Debug.Log("Failed to find a valid NavMesh position");
+        }
     }
 }
