@@ -1,10 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\",
+  "WorkspaceRootPath": "C:\\Users\\TkBoom\\hackthon\\GameDEv\\Heroes\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|d:\\xscale\\hackathon\\gamedev\\unity_folder\\heroes\\assets\\scripts\\npc\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\npc\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|c:\\users\\tkboom\\hackthon\\gamedev\\heroes\\assets\\scripts\\npc\\npc\\npccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\npc\\npc\\npccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "playerController.cs",
-              "DocumentMoniker": "D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\Assets\\Scripts\\NPC\\playerController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\NPC\\playerController.cs",
-              "ToolTip": "D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\Assets\\Scripts\\NPC\\playerController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\NPC\\playerController.cs",
-              "ViewState": "AQIAAEYAAAAAAAAAAAAgwGgAAAAAAAAA",
+              "Title": "NPCcontroller.cs",
+              "DocumentMoniker": "C:\\Users\\TkBoom\\hackthon\\GameDEv\\Heroes\\Assets\\Scripts\\NPC\\NPC\\NPCcontroller.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\NPC\\NPC\\NPCcontroller.cs",
+              "ToolTip": "C:\\Users\\TkBoom\\hackthon\\GameDEv\\Heroes\\Assets\\Scripts\\NPC\\NPC\\NPCcontroller.cs",
+              "RelativeToolTip": "Assets\\Scripts\\NPC\\NPC\\NPCcontroller.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-08T14:32:55.816Z",
+              "WhenOpened": "2024-06-08T17:19:01.971Z",
               "EditorCaption": ""
             }
           ]
