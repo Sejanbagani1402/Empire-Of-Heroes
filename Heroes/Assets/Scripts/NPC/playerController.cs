@@ -8,6 +8,7 @@ public class playerController : MonoBehaviour
     private Vector3 currentTargetPos;
 
     public LayerMask solidObjectLayer;
+    public LayerMask npcLayer;
 
     private Animator animator;
 
@@ -44,6 +45,7 @@ public class playerController : MonoBehaviour
             }
         }
     }
+
 
     IEnumerator Move(Vector3 initialTargetPos)
     {
@@ -98,7 +100,7 @@ public class playerController : MonoBehaviour
     private bool IsWalkable(Vector3 targetPos)
     {
         float checkRadius = 0.1f; // Adjust the radius as needed
-        Collider2D hit = Physics2D.OverlapCircle(targetPos, checkRadius, solidObjectLayer);
+        Collider2D hit = Physics2D.OverlapCircle(targetPos, checkRadius, solidObjectLayer | npcLayer);
         return hit == null;
     }
 }

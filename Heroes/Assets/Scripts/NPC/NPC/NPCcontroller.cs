@@ -1,57 +1,65 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
-public class RandomMovement : MonoBehaviour
+public class NPCcontroller : MonoBehaviour
 {
-    public float walkRadius = 10f;
-    private NavMeshAgent agent;
-    private Vector3 targetPoint;
+    [SerializeField] float moveSpeed = 1.0f;
+    [SerializeField] List<Vector2> path; // Predefined path points for the NPC to follow
+    [SerializeField] float waitTimeAtPoint = 1.0f;
+
+    NPCAnimator npcAnimator;
+    int currentPathIndex = 0;
+    bool isMoving = false;
 
     void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
-
-        // Ensure the agent is on the NavMesh
-        if (NavMesh.SamplePosition(transform.position, out NavMeshHit hit, 1.0f, NavMesh.AllAreas))
-        {
-            transform.position = hit.position;
-            agent.Warp(hit.position);  // Ensure the agent's internal state is updated
-            SetRandomDestination();
-        }
-        else
-        {
-            Debug.LogError("Agent is not on the NavMesh. Please place the agent on a walkable area.");
-        }
+        npcAnimator = GetComponent<NPCAnimator>();
+        StartCoroutine(FollowPath());
     }
 
     void Update()
     {
-        if (agent.isOnNavMesh)
+        // Update NPCAnimator with movement values
+        if (isMoving)
         {
-            if (!agent.pathPending && agent.remainingDistance < 0.5f)
-            {
-                SetRandomDestination();
-            }
+            Vector2 direction = (path[currentPathIndex] - (Vector2)transform.position).normalized;
+            npcAnimator.MoveX = direction.x;
+            npcAnimator.MoveY = direction.y;
         }
         else
         {
-            Debug.LogError("Agent is not on the NavMesh in Update");
+            npcAnimator.MoveX = 0;
+            npcAnimator.MoveY = 0;
         }
+
+        npcAnimator.IsMoving = isMoving;
     }
 
-    void SetRandomDestination()
+    IEnumerator FollowPath()
     {
-        Vector3 randomDirection = Random.insideUnitSphere * walkRadius;
-        randomDirection += transform.position;
-        if (NavMesh.SamplePosition(randomDirection, out NavMeshHit hit, walkRadius, NavMesh.AllAreas))
+        while (true)
         {
-            targetPoint = hit.position;
-            agent.SetDestination(targetPoint);
-            Debug.Log("New Target Point: " + targetPoint);
-        }
-        else
-        {
-            Debug.Log("Failed to find a valid NavMesh position");
+            if (!isMoving)
+            {
+                yield return new WaitForSeconds(waitTimeAtPoint);
+                isMoving = true;
+            }
+
+            while (isMoving)
+            {
+                Vector2 targetPosition = path[currentPathIndex];
+                Vector2 newPosition = Vector2.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+                transform.position = new Vector3(newPosition.x, newPosition.y, transform.position.z);
+
+                if (Vector2.Distance(transform.position, targetPosition) < 0.1f)
+                {
+                    isMoving = false;
+                    currentPathIndex = (currentPathIndex + 1) % path.Count;
+                }
+
+                yield return null;
+            }
         }
     }
 }

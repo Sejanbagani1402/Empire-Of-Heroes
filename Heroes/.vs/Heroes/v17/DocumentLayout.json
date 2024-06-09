@@ -3,7 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\TkBoom\\hackthon\\GameDEv\\Heroes\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|c:\\users\\tkboom\\hackthon\\gamedev\\heroes\\assets\\scripts\\npc\\npc\\npccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|c:\\users\\tkboom\\hackthon\\gamedev\\heroes\\assets\\scripts\\npc\\npc\\npcanimator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\npc\\npc\\npcanimator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|c:\\users\\tkboom\\hackthon\\gamedev\\heroes\\assets\\scripts\\npc\\util\\spriteanimater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\npc\\util\\spriteanimater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|C:\\Users\\TkBoom\\hackthon\\GameDEv\\Heroes\\assets\\scripts\\npc\\npc\\npccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\npc\\npc\\npccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -19,14 +27,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "NPCAnimator.cs",
+              "DocumentMoniker": "C:\\Users\\TkBoom\\hackthon\\GameDEv\\Heroes\\Assets\\Scripts\\NPC\\NPC\\NPCAnimator.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\NPC\\NPC\\NPCAnimator.cs",
+              "ToolTip": "C:\\Users\\TkBoom\\hackthon\\GameDEv\\Heroes\\Assets\\Scripts\\NPC\\NPC\\NPCAnimator.cs",
+              "RelativeToolTip": "Assets\\Scripts\\NPC\\NPC\\NPCAnimator.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAgwBsAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-09T10:22:41.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "spriteAnimater.cs",
+              "DocumentMoniker": "C:\\Users\\TkBoom\\hackthon\\GameDEv\\Heroes\\Assets\\Scripts\\NPC\\util\\spriteAnimater.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\NPC\\util\\spriteAnimater.cs",
+              "ToolTip": "C:\\Users\\TkBoom\\hackthon\\GameDEv\\Heroes\\Assets\\Scripts\\NPC\\util\\spriteAnimater.cs",
+              "RelativeToolTip": "Assets\\Scripts\\NPC\\util\\spriteAnimater.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-09T09:42:44.583Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "NPCcontroller.cs",
               "DocumentMoniker": "C:\\Users\\TkBoom\\hackthon\\GameDEv\\Heroes\\Assets\\Scripts\\NPC\\NPC\\NPCcontroller.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\NPC\\NPC\\NPCcontroller.cs",
               "ToolTip": "C:\\Users\\TkBoom\\hackthon\\GameDEv\\Heroes\\Assets\\Scripts\\NPC\\NPC\\NPCcontroller.cs",
               "RelativeToolTip": "Assets\\Scripts\\NPC\\NPC\\NPCcontroller.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADgAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-08T17:19:01.971Z",
+              "WhenOpened": "2024-06-09T09:36:20.12Z",
               "EditorCaption": ""
             }
           ]
