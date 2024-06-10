@@ -40,14 +40,21 @@ public class NPCAnimator : MonoBehaviour
     {
         var prevAnim = currentAnim;
 
-        if (MoveX == 1)
-            currentAnim = walkRightAnim;
-        else if (MoveX == -1)
-            currentAnim = walkLeftAnim;
-        else if (MoveY == 1)
-            currentAnim = walkUpAnim;
-        else if (MoveY == -1)
-            currentAnim = walkDownAnim;
+        // Determine the animation based on the movement direction
+        if (Mathf.Abs(MoveX) > Mathf.Abs(MoveY))
+        {
+            if (MoveX > 0)
+                currentAnim = walkRightAnim;
+            else if (MoveX < 0)
+                currentAnim = walkLeftAnim;
+        }
+        else
+        {
+            if (MoveY > 0)
+                currentAnim = walkUpAnim;
+            else if (MoveY < 0)
+                currentAnim = walkDownAnim;
+        }
 
         if (currentAnim != prevAnim)
         {

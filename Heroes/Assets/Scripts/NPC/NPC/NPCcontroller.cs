@@ -12,15 +12,17 @@ public class NPCcontroller : MonoBehaviour
     int currentPathIndex = 0;
     bool isMoving = false;
 
+    Rigidbody2D rb;
+
     void Start()
     {
         npcAnimator = GetComponent<NPCAnimator>();
+        rb = GetComponent<Rigidbody2D>();
         StartCoroutine(FollowPath());
     }
 
     void Update()
     {
-        // Update NPCAnimator with movement values
         if (isMoving)
         {
             Vector2 direction = (path[currentPathIndex] - (Vector2)transform.position).normalized;
@@ -49,10 +51,12 @@ public class NPCcontroller : MonoBehaviour
             while (isMoving)
             {
                 Vector2 targetPosition = path[currentPathIndex];
-                Vector2 newPosition = Vector2.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
-                transform.position = new Vector3(newPosition.x, newPosition.y, transform.position.z);
+                Vector2 movementDirection = (targetPosition - rb.position).normalized;
+                Vector2 newPosition = rb.position + movementDirection * moveSpeed * Time.deltaTime;
 
-                if (Vector2.Distance(transform.position, targetPosition) < 0.1f)
+                rb.MovePosition(newPosition);
+
+                if (Vector2.Distance(rb.position, targetPosition) < 0.1f)
                 {
                     isMoving = false;
                     currentPathIndex = (currentPathIndex + 1) % path.Count;
@@ -60,6 +64,15 @@ public class NPCcontroller : MonoBehaviour
 
                 yield return null;
             }
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        // Stop moving if a collision occurs
+        if (isMoving)
+        {
+            isMoving = false;
         }
     }
 }

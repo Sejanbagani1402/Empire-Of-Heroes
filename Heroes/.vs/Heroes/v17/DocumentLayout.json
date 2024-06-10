@@ -7,12 +7,16 @@
       "RelativeMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\npc\\npc\\npcanimator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\assets\\scripts\\npc\\util\\spriteanimater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\npc\\util\\spriteanimater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\assets\\scripts\\npc\\npc\\npccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\npc\\npc\\npccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|d:\\xscale\\hackathon\\gamedev\\unity_folder\\heroes\\assets\\scripts\\npc\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\npc\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\assets\\scripts\\npc\\util\\spriteanimater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\npc\\util\\spriteanimater.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,8 +26,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "playerController.cs",
+              "DocumentMoniker": "D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\Assets\\Scripts\\NPC\\playerController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\NPC\\playerController.cs",
+              "ToolTip": "D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\Assets\\Scripts\\NPC\\playerController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\NPC\\playerController.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAwwGYAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T03:43:39.061Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -32,14 +49,14 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\NPC\\NPC\\NPCAnimator.cs",
               "ToolTip": "D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\Assets\\Scripts\\NPC\\NPC\\NPCAnimator.cs",
               "RelativeToolTip": "Assets\\Scripts\\NPC\\NPC\\NPCAnimator.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAA5wB4AAAAPAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-09T10:22:41.998Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "spriteAnimater.cs",
               "DocumentMoniker": "D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\Assets\\Scripts\\NPC\\util\\spriteAnimater.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\NPC\\util\\spriteAnimater.cs",
@@ -51,15 +68,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "NPCcontroller.cs",
               "DocumentMoniker": "D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\Assets\\Scripts\\NPC\\NPC\\NPCcontroller.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\NPC\\NPC\\NPCcontroller.cs",
               "ToolTip": "D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\Assets\\Scripts\\NPC\\NPC\\NPCcontroller.cs",
               "RelativeToolTip": "Assets\\Scripts\\NPC\\NPC\\NPCcontroller.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAcAAAA",
+              "ViewState": "AQIAADcAAAAAAAAAAAAcwEIAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-09T09:36:20.12Z"
+              "WhenOpened": "2024-06-09T09:36:20.12Z",
+              "EditorCaption": ""
             }
           ]
         }
