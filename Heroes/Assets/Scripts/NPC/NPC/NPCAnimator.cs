@@ -8,6 +8,7 @@ public class NPCAnimator : MonoBehaviour
     [SerializeField] List<Sprite> walkUpSprites;
     [SerializeField] List<Sprite> walkRightSprites;
     [SerializeField] List<Sprite> walkLeftSprites;
+    [SerializeField] Sprite idealSprite;
 
     // Parameters
     public float MoveX { get; set; }
@@ -64,6 +65,6 @@ public class NPCAnimator : MonoBehaviour
         if (IsMoving)
             currentAnim.Update();
         else
-            spriteRenderer.sprite = currentAnim.Frames[0];
+            spriteRenderer.sprite = idealSprite;
     }
 }

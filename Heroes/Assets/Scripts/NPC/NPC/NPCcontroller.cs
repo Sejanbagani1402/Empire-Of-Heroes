@@ -5,7 +5,7 @@ using UnityEngine;
 public class NPCcontroller : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 1.0f;
-    [SerializeField] List<Vector2> path; // Predefined path points for the NPC to follow
+    [SerializeField] List<Vector2> path;
     [SerializeField] float waitTimeAtPoint = 1.0f;
 
     NPCAnimator npcAnimator;
