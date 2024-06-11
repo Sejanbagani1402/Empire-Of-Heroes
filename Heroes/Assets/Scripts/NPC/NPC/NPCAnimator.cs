@@ -10,6 +10,8 @@ public class NPCAnimator : MonoBehaviour
     [SerializeField] List<Sprite> walkLeftSprites;
     [SerializeField] Sprite idealSprite;
 
+    [SerializeField] Vector3 movingScale = new Vector3(1, 1, 1);
+
     // Parameters
     public float MoveX { get; set; }
     public float MoveY { get; set; }
@@ -63,7 +65,10 @@ public class NPCAnimator : MonoBehaviour
         }
 
         if (IsMoving)
+        {
             currentAnim.Update();
+            transform.localScale = movingScale;
+        }
         else
             spriteRenderer.sprite = idealSprite;
     }
