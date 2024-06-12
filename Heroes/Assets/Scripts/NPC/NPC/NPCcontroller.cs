@@ -69,10 +69,19 @@ public class NPCcontroller : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        // Stop moving if a collision occurs
         if (isMoving)
         {
             isMoving = false;
+            npcAnimator.IsMoving = false;
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (isMoving)
+        {
+            isMoving = false;
+            npcAnimator.IsMoving = false;
         }
     }
 }
