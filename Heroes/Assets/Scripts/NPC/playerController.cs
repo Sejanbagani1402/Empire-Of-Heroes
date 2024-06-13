@@ -27,6 +27,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        // Set initial direction to face up when entering a new area
+        SetInitialDirection(Vector2.up);
+    }
+
     private void Update()
     {
         if (Input.GetMouseButtonDown(0) || (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began))
@@ -64,14 +70,6 @@ public class PlayerController : MonoBehaviour
             // Start a new movement coroutine
             moveCoroutine = StartCoroutine(Move(currentTargetPos));
         }
-
-        // Update animation parameters based on current movement direction
-        if (animator != null)
-        {
-            Vector3 direction = currentTargetPos - transform.position;
-            animator.SetFloat("moveX", direction.x);
-            animator.SetFloat("moveY", direction.y);
-        }
     }
 
     private IEnumerator Move(Vector3 targetPos)
@@ -101,6 +99,17 @@ public class PlayerController : MonoBehaviour
 
             // Clamp next position within the bounds of the background collider
             nextPosition = ClampPositionWithinBackground(nextPosition);
+
+            // Update animation parameters based on current movement direction
+            Vector3 direction = nextPosition - transform.position;
+            if (animator != null)
+            {
+                // Normalize the direction to get the movement direction (either -1, 0, or 1)
+                direction.Normalize();
+                animator.SetFloat("moveX", direction.x);
+                animator.SetFloat("moveY", direction.y);
+                Debug.Log($"moveX: {direction.x}, moveY: {direction.y}");
+            }
 
             // Move the player
             transform.position = nextPosition;
@@ -135,5 +144,16 @@ public class PlayerController : MonoBehaviour
         float checkRadius = 0.1f;
         Collider2D hit = Physics2D.OverlapCircle(targetPos, checkRadius, solidObjectLayer | npcLayer);
         return hit == null;
+    }
+
+    // Public method to set the initial direction
+    public void SetInitialDirection(Vector2 direction)
+    {
+        if (animator != null)
+        {
+            animator.SetFloat("moveX", direction.x);
+            animator.SetFloat("moveY", direction.y);
+            animator.SetBool("isMoving", false);
+        }
     }
 }
