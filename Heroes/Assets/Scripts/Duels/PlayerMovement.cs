@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private bool isGrounded;
     private bool facingRight = true; // To keep track of character facing direction
+    private Health enemyHealth; // Reference to enemy's Health component
 
     // Parameters for animator
     private int isRunningHash;
@@ -35,10 +36,23 @@ public class PlayerMovement : MonoBehaviour
 
         // Freeze rotation to prevent character from rotating when jumping
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+
+        // Get the enemy's Health component
+        GameObject enemy = GameObject.FindGameObjectWithTag("Enemy");
+        if (enemy != null)
+        {
+            enemyHealth = enemy.GetComponent<Health>();
+        }
     }
 
     void Update()
     {
+        if (enemyHealth != null && enemyHealth.CurrentHealth <= 0)
+        {
+            // Stop attacking if enemy is dead
+            return;
+        }
+
         HandleMovement();
         HandleJump();
         HandleAttack();

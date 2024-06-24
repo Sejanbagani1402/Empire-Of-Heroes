@@ -16,6 +16,7 @@ public class EnemyAI : MonoBehaviour
     public float attackRange = 1f; // Range within which the enemy will attack
     public float attackCooldown = 1f; // Time between attacks
     private float lastAttackTime;
+    public Health playerHealth; // Reference to player's Health component
 
     // Parameters for animator
     private int isRunningHash;
@@ -41,6 +42,9 @@ public class EnemyAI : MonoBehaviour
 
         // Freeze rotation to prevent character from rotating when jumping
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+
+        // Get the player's Health component
+        playerHealth = player.GetComponent<Health>();
     }
 
     void Update()
@@ -51,14 +55,22 @@ public class EnemyAI : MonoBehaviour
 
     void HandleMovement()
     {
+        if (playerHealth.CurrentHealth <= 0)
+        {
+            // Stop movement if player is dead
+            rb.velocity = Vector2.zero;
+            animator.SetBool(isRunningHash, false);
+            return;
+        }
+
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
-        //Debug.Log("Distance to player: " + distanceToPlayer);
+        Debug.Log("Distance to player: " + distanceToPlayer);
 
         if (distanceToPlayer > attackRange)
         {
             Vector2 direction = (player.position - transform.position).normalized;
             Vector2 moveVelocity = new Vector2(direction.x * moveSpeed, rb.velocity.y);
-            //Debug.Log("Moving with velocity: " + moveVelocity);
+            Debug.Log("Moving with velocity: " + moveVelocity);
             rb.velocity = moveVelocity;
 
             // Update animator
@@ -84,6 +96,12 @@ public class EnemyAI : MonoBehaviour
 
     void HandleAttack()
     {
+        if (playerHealth.CurrentHealth <= 0)
+        {
+            // Stop attacking if player is dead
+            return;
+        }
+
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
         Debug.Log("Checking attack range. Distance: " + distanceToPlayer + ", Attack range: " + attackRange);
 
@@ -93,6 +111,12 @@ public class EnemyAI : MonoBehaviour
             // Attack animation
             animator.SetTrigger(attackHash);
             lastAttackTime = Time.time;
+
+            // Deal damage to the player
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(10); // Adjust the damage amount as needed
+            }
         }
     }
 

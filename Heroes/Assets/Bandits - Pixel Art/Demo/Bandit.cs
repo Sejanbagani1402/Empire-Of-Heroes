@@ -14,6 +14,7 @@ public class Bandit : MonoBehaviour
     private bool m_combatIdle = false;
     private bool m_isDead = false;
     private bool m_facingRight = true; // Track the facing direction
+    private Health enemyHealth; // Reference to enemy's Health component
 
     // Use this for initialization
     void Start()
@@ -24,11 +25,24 @@ public class Bandit : MonoBehaviour
 
         // Apply the scale multiplier to the parent GameObject
         transform.localScale = scaleMultiplier;
+
+        // Get the enemy's Health component
+        GameObject enemy = GameObject.FindGameObjectWithTag("Enemy");
+        if (enemy != null)
+        {
+            enemyHealth = enemy.GetComponent<Health>();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (enemyHealth != null && enemyHealth.CurrentHealth <= 0)
+        {
+            // Stop attacking if enemy is dead
+            return;
+        }
+
         // Check if character just landed on the ground
         if (!m_grounded && m_groundSensor.State())
         {
