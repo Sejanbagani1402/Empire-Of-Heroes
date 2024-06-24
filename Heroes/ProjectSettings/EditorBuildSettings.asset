@@ -11,4 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/inner_hero_house.unity
     guid: 34cf2156749c5214ab5c6265aee9102c
+  - enabled: 1
+    path: Assets/Scenes/house-1.unity
+    guid: bc7d50ffaa0d5ec42b79bf12b8d6b0af
+  - enabled: 1
+    path: Assets/Scenes/house-2.unity
+    guid: c5d4972ccf5235540a2179d353912759
+  - enabled: 1
+    path: Assets/Scenes/house-3.unity
+    guid: db56962539caa064d923bcd3ad0dbf64
   m_configObjects: {}
