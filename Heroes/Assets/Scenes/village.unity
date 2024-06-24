@@ -138484,6 +138484,7 @@ MonoBehaviour:
   ToggleButton: {fileID: 824187619}
   warPanel: {fileID: 688750892}
   transistionspeed: 5
+  swipeThreshold: 50
   isPanelVisible: 0
 --- !u!114 &1614103068
 MonoBehaviour:
@@ -138879,7 +138880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd318ae5d0171e6418af4ed147fbb5fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: inner_hero_house
+  sceneToLoad: house-1
   initialDirection: {x: 0, y: 1}
 --- !u!61 &1742114600
 BoxCollider2D:
@@ -139619,7 +139620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd318ae5d0171e6418af4ed147fbb5fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: inner_hero_house
+  sceneToLoad: house-2
   initialDirection: {x: 0, y: 1}
 --- !u!61 &1957016005
 BoxCollider2D:
@@ -140057,7 +140058,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 176.2, y: -19.1}
+  m_AnchoredPosition: {x: 176.20001, y: -19.1}
   m_SizeDelta: {x: 258, y: 379.95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2003621551
@@ -140961,7 +140962,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd318ae5d0171e6418af4ed147fbb5fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: inner_hero_house
+  sceneToLoad: house-3
   initialDirection: {x: 0, y: 1}
 --- !u!61 &2093139072
 BoxCollider2D:
