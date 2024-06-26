@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlayerController : MonoBehaviour
 {
@@ -21,10 +22,6 @@ public class PlayerController : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         backgroundCollider = background.GetComponent<Collider2D>();
-        if (backgroundCollider == null)
-        {
-            Debug.LogError("Background GameObject does not have a Collider2D component.");
-        }
     }
 
     private void Start()
@@ -34,6 +31,15 @@ public class PlayerController : MonoBehaviour
     }
 
     private void Update()
+    {
+        // Check if the pointer is over a UI element before processing movement
+        if (!EventSystem.current.IsPointerOverGameObject())
+        {
+            HandlePlayerMovementInput();
+        }
+    }
+
+    private void HandlePlayerMovementInput()
     {
         if (Input.GetMouseButtonDown(0) || (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began))
         {
@@ -108,7 +114,6 @@ public class PlayerController : MonoBehaviour
                 direction.Normalize();
                 animator.SetFloat("moveX", direction.x);
                 animator.SetFloat("moveY", direction.y);
-                Debug.Log($"moveX: {direction.x}, moveY: {direction.y}");
             }
 
             // Move the player
@@ -157,3 +162,4 @@ public class PlayerController : MonoBehaviour
         }
     }
 }
+

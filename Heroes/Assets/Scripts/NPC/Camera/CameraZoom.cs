@@ -4,17 +4,25 @@ public class CameraZoom : MonoBehaviour
 {
     public float zoomSpeed = 0.5f;  // Speed of zoom
     public float minZoom = 5f;  // Minimum zoom level
-    public float maxZoom = 15f;  // Maximum zoom level
+    public float defaultMaxZoom = 30f;  // Default maximum zoom level
+    public float reducedMaxZoom = 21f;  // Reduced maximum zoom level
+    public float boundaryBuffer = 10f;  // Distance from boundary to start reducing zoom
 
     private Camera cam;
+    private GameObject player;
+    private float currentMaxZoom;
 
     private void Start()
     {
         cam = GetComponent<Camera>();
+        player = GameObject.FindGameObjectWithTag("Player");
+        currentMaxZoom = defaultMaxZoom;
     }
 
     private void Update()
     {
+        UpdateMaxZoomBasedOnPlayerPosition();
+
         if (Application.isMobilePlatform)
         {
             HandleMobileZoom();
@@ -30,7 +38,7 @@ public class CameraZoom : MonoBehaviour
         float scroll = Input.GetAxis("Mouse ScrollWheel");
         if (scroll != 0.0f)
         {
-            cam.orthographicSize = Mathf.Clamp(cam.orthographicSize - scroll * zoomSpeed, minZoom, maxZoom);
+            cam.orthographicSize = Mathf.Clamp(cam.orthographicSize - scroll * zoomSpeed, minZoom, currentMaxZoom);
         }
     }
 
@@ -49,7 +57,27 @@ public class CameraZoom : MonoBehaviour
 
             float deltaMagnitudeDiff = prevTouchDeltaMag - touchDeltaMag;
 
-            cam.orthographicSize = Mathf.Clamp(cam.orthographicSize + deltaMagnitudeDiff * zoomSpeed * Time.deltaTime, minZoom, maxZoom);
+            cam.orthographicSize = Mathf.Clamp(cam.orthographicSize + deltaMagnitudeDiff * zoomSpeed * Time.deltaTime, minZoom, currentMaxZoom);
+        }
+    }
+
+    private void UpdateMaxZoomBasedOnPlayerPosition()
+    {
+        if (player != null)
+        {
+            Vector3 playerPosition = player.transform.position;
+
+            bool isNearHorizontalBoundary = Mathf.Abs(playerPosition.x) > (130 - boundaryBuffer);
+            bool isNearVerticalBoundary = Mathf.Abs(playerPosition.y) > (92 - boundaryBuffer);
+
+            if (isNearHorizontalBoundary || isNearVerticalBoundary)
+            {
+                currentMaxZoom = reducedMaxZoom;
+            }
+            else
+            {
+                currentMaxZoom = defaultMaxZoom;
+            }
         }
     }
 }
