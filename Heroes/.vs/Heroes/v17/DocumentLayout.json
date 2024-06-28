@@ -1,41 +1,41 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\TkBoom\\hackthon\\GameDEv\\Heroes\\",
+  "WorkspaceRootPath": "D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\",
   "Documents": [
     {
-<<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|d:\\xscale\\hackathon\\gamedev\\unity_folder\\heroes\\assets\\scripts\\duels\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|d:\\xscale\\hackathon\\gamedev\\unity_folder\\heroes\\assets\\scripts\\uimanager\\villagetoduels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\uimanager\\villagetoduels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|d:\\xscale\\hackathon\\gamedev\\unity_folder\\heroes\\assets\\scripts\\uimanager\\togglepanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\uimanager\\togglepanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\assets\\scripts\\npc\\camera\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\npc\\camera\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\assets\\scripts\\npc\\camera\\camerazoom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\npc\\camera\\camerazoom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\assets\\scripts\\duels\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\duels\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\assets\\scripts\\npc\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-=======
-      "AbsoluteMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|c:\\users\\tkboom\\hackthon\\gamedev\\heroes\\assets\\scripts\\uimanager\\fader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\uimanager\\fader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|c:\\users\\tkboom\\hackthon\\gamedev\\heroes\\assets\\scripts\\duels\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\duels\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|C:\\Users\\TkBoom\\hackthon\\GameDEv\\Heroes\\assets\\scripts\\npc\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
->>>>>>> 6de2f152a5d3df96358f1b0a8c8721afef8b50ac
       "RelativeMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\npc\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|C:\\Users\\TkBoom\\hackthon\\GameDEv\\Heroes\\assets\\scripts\\duels\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\assets\\scripts\\duels\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\duels\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|C:\\Users\\TkBoom\\hackthon\\GameDEv\\Heroes\\assets\\scripts\\npc\\camera\\camerazoom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\npc\\camera\\camerazoom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|C:\\Users\\TkBoom\\hackthon\\GameDEv\\Heroes\\assets\\bandits - pixel art\\demo\\bandit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\assets\\bandits - pixel art\\demo\\bandit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|solutionrelative:assets\\bandits - pixel art\\demo\\bandit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|C:\\Users\\TkBoom\\hackthon\\GameDEv\\Heroes\\assets\\scripts\\duels\\enemyai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\assets\\scripts\\duels\\enemyai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\duels\\enemyai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -51,27 +51,48 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "fader.cs",
-              "DocumentMoniker": "C:\\Users\\TkBoom\\hackthon\\GameDEv\\Heroes\\Assets\\Scripts\\UIManager\\fader.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\UIManager\\fader.cs",
-              "ToolTip": "C:\\Users\\TkBoom\\hackthon\\GameDEv\\Heroes\\Assets\\Scripts\\UIManager\\fader.cs",
-              "RelativeToolTip": "Assets\\Scripts\\UIManager\\fader.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAgwCwAAAAAAAAA",
+              "Title": "villagetoduels.cs",
+              "DocumentMoniker": "D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\Assets\\Scripts\\UIManager\\villagetoduels.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UIManager\\villagetoduels.cs",
+              "ToolTip": "D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\Assets\\Scripts\\UIManager\\villagetoduels.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UIManager\\villagetoduels.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-<<<<<<< HEAD
-              "WhenOpened": "2024-06-26T13:24:23.773Z"
-=======
-              "WhenOpened": "2024-06-28T01:54:56.626Z",
+              "WhenOpened": "2024-06-28T13:50:12.044Z",
               "EditorCaption": ""
->>>>>>> 6de2f152a5d3df96358f1b0a8c8721afef8b50ac
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TogglePanel.cs",
+              "DocumentMoniker": "D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\Assets\\Scripts\\UIManager\\TogglePanel.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UIManager\\TogglePanel.cs",
+              "ToolTip": "D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\Assets\\Scripts\\UIManager\\TogglePanel.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UIManager\\TogglePanel.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwBkAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T13:42:16.326Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "CameraFollow.cs",
+              "DocumentMoniker": "D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\Assets\\Scripts\\NPC\\Camera\\CameraFollow.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\NPC\\Camera\\CameraFollow.cs",
+              "ToolTip": "D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\Assets\\Scripts\\NPC\\Camera\\CameraFollow.cs",
+              "RelativeToolTip": "Assets\\Scripts\\NPC\\Camera\\CameraFollow.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAUwDEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T13:17:16.026Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "playerController.cs",
-              "DocumentMoniker": "C:\\Users\\TkBoom\\hackthon\\GameDEv\\Heroes\\Assets\\Scripts\\NPC\\playerController.cs",
+              "DocumentMoniker": "D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\Assets\\Scripts\\NPC\\playerController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\NPC\\playerController.cs",
-              "ToolTip": "C:\\Users\\TkBoom\\hackthon\\GameDEv\\Heroes\\Assets\\Scripts\\NPC\\playerController.cs",
+              "ToolTip": "D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\Assets\\Scripts\\NPC\\playerController.cs",
               "RelativeToolTip": "Assets\\Scripts\\NPC\\playerController.cs",
               "ViewState": "AQIAAAoAAAAAAAAAAIBJwBMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -79,36 +100,35 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "CameraZoom.cs",
-              "DocumentMoniker": "C:\\Users\\TkBoom\\hackthon\\GameDEv\\Heroes\\Assets\\Scripts\\NPC\\Camera\\CameraZoom.cs",
+              "DocumentMoniker": "D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\Assets\\Scripts\\NPC\\Camera\\CameraZoom.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\NPC\\Camera\\CameraZoom.cs",
-              "ToolTip": "C:\\Users\\TkBoom\\hackthon\\GameDEv\\Heroes\\Assets\\Scripts\\NPC\\Camera\\CameraZoom.cs",
+              "ToolTip": "D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\Assets\\Scripts\\NPC\\Camera\\CameraZoom.cs",
               "RelativeToolTip": "Assets\\Scripts\\NPC\\Camera\\CameraZoom.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwFMAAAAAAAAA",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAiwFMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-26T11:24:22.969Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Health.cs",
-              "DocumentMoniker": "C:\\Users\\TkBoom\\hackthon\\GameDEv\\Heroes\\Assets\\Scripts\\Duels\\Health.cs",
+              "DocumentMoniker": "D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\Assets\\Scripts\\Duels\\Health.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Duels\\Health.cs",
-              "ToolTip": "C:\\Users\\TkBoom\\hackthon\\GameDEv\\Heroes\\Assets\\Scripts\\Duels\\Health.cs",
+              "ToolTip": "D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\Assets\\Scripts\\Duels\\Health.cs",
               "RelativeToolTip": "Assets\\Scripts\\Duels\\Health.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-24T15:21:37.11Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-24T15:21:37.11Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "EnemyAI.cs",
-              "DocumentMoniker": "C:\\Users\\TkBoom\\hackthon\\GameDEv\\Heroes\\Assets\\Scripts\\Duels\\EnemyAI.cs",
+              "DocumentMoniker": "D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\Assets\\Scripts\\Duels\\EnemyAI.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Duels\\EnemyAI.cs",
-              "ToolTip": "C:\\Users\\TkBoom\\hackthon\\GameDEv\\Heroes\\Assets\\Scripts\\Duels\\EnemyAI.cs",
+              "ToolTip": "D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\Assets\\Scripts\\Duels\\EnemyAI.cs",
               "RelativeToolTip": "Assets\\Scripts\\Duels\\EnemyAI.cs",
               "ViewState": "AQIAAGAAAAAAAAAAAADwv5UAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -116,11 +136,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Bandit.cs",
-              "DocumentMoniker": "C:\\Users\\TkBoom\\hackthon\\GameDEv\\Heroes\\Assets\\Bandits - Pixel Art\\Demo\\Bandit.cs",
+              "DocumentMoniker": "D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\Assets\\Bandits - Pixel Art\\Demo\\Bandit.cs",
               "RelativeDocumentMoniker": "Assets\\Bandits - Pixel Art\\Demo\\Bandit.cs",
-              "ToolTip": "C:\\Users\\TkBoom\\hackthon\\GameDEv\\Heroes\\Assets\\Bandits - Pixel Art\\Demo\\Bandit.cs",
+              "ToolTip": "D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\Assets\\Bandits - Pixel Art\\Demo\\Bandit.cs",
               "RelativeToolTip": "Assets\\Bandits - Pixel Art\\Demo\\Bandit.cs",
               "ViewState": "AQIAABQAAAAAAAAAAAAQwCAAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -128,11 +148,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "PlayerMovement.cs",
-              "DocumentMoniker": "C:\\Users\\TkBoom\\hackthon\\GameDEv\\Heroes\\Assets\\Scripts\\Duels\\PlayerMovement.cs",
+              "DocumentMoniker": "D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\Assets\\Scripts\\Duels\\PlayerMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Duels\\PlayerMovement.cs",
-              "ToolTip": "C:\\Users\\TkBoom\\hackthon\\GameDEv\\Heroes\\Assets\\Scripts\\Duels\\PlayerMovement.cs",
+              "ToolTip": "D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\Assets\\Scripts\\Duels\\PlayerMovement.cs",
               "RelativeToolTip": "Assets\\Scripts\\Duels\\PlayerMovement.cs",
               "ViewState": "AQIAADkAAAAAAAAAAAAkwEYAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

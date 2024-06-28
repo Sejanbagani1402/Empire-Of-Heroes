@@ -23,7 +23,7 @@ public class TogglePanel : MonoBehaviour
     {
         float panelWidth = warPanel.rect.width;
         hiddenPosition = new Vector2(-panelWidth, warPanel.anchoredPosition.y);
-        visiblePosition = new Vector2(504, warPanel.anchoredPosition.y);
+        visiblePosition = new Vector2(446, warPanel.anchoredPosition.y);
 
         warPanel.anchoredPosition = hiddenPosition;
 
