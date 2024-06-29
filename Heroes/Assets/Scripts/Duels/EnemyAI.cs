@@ -13,7 +13,7 @@ public class EnemyAI : MonoBehaviour
 
     // AI variables
     public Transform player; // Reference to the player
-    public float attackRange = 1f; // Range within which the enemy will attack
+    public float attackRange = 2.2f; // Range within which the enemy will attack
     public float attackCooldown = 1f; // Time between attacks
     private float lastAttackTime;
     public Health playerHealth; // Reference to player's Health component
@@ -28,6 +28,7 @@ public class EnemyAI : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("EnemyAI Start: Initializing components and parameters.");
         // Get the Animator component
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
@@ -45,10 +46,16 @@ public class EnemyAI : MonoBehaviour
 
         // Get the player's Health component
         playerHealth = player.GetComponent<Health>();
+
+        if (playerHealth == null)
+        {
+            Debug.LogError("Player Health component not found.");
+        }
     }
 
     void Update()
     {
+        Debug.Log("EnemyAI Update: Handling movement and attack.");
         HandleMovement();
         HandleAttack();
     }
@@ -57,6 +64,7 @@ public class EnemyAI : MonoBehaviour
     {
         if (playerHealth.CurrentHealth <= 0)
         {
+            Debug.Log("Player is dead. Stopping enemy movement.");
             // Stop movement if player is dead
             rb.velocity = Vector2.zero;
             animator.SetBool(isRunningHash, false);
@@ -69,9 +77,10 @@ public class EnemyAI : MonoBehaviour
         if (distanceToPlayer > attackRange)
         {
             Vector2 direction = (player.position - transform.position).normalized;
-            Vector2 moveVelocity = new Vector2(direction.x * moveSpeed, rb.velocity.y);
-            Debug.Log("Moving with velocity: " + moveVelocity);
-            rb.velocity = moveVelocity;
+            Vector2 targetPosition = (Vector2)transform.position + direction * moveSpeed * Time.deltaTime;
+            Debug.Log("Moving to position: " + targetPosition);
+
+            rb.MovePosition(targetPosition);
 
             // Update animator
             animator.SetBool(isRunningHash, true);
@@ -79,15 +88,18 @@ public class EnemyAI : MonoBehaviour
             // Flip character direction based on movement direction
             if (direction.x > 0 && !facingRight)
             {
+                Debug.Log("Flipping to face right.");
                 Flip();
             }
             else if (direction.x < 0 && facingRight)
             {
+                Debug.Log("Flipping to face left.");
                 Flip();
             }
         }
         else
         {
+            Debug.Log("Player within attack range. Stopping movement.");
             // Stop moving
             rb.velocity = new Vector2(0, rb.velocity.y);
             animator.SetBool(isRunningHash, false);
@@ -98,6 +110,7 @@ public class EnemyAI : MonoBehaviour
     {
         if (playerHealth.CurrentHealth <= 0)
         {
+            Debug.Log("Player is dead. Stopping attacks.");
             // Stop attacking if player is dead
             return;
         }
@@ -115,13 +128,19 @@ public class EnemyAI : MonoBehaviour
             // Deal damage to the player
             if (playerHealth != null)
             {
+                Debug.Log("Dealing damage to the player.");
                 playerHealth.TakeDamage(10); // Adjust the damage amount as needed
+            }
+            else
+            {
+                Debug.LogError("Player Health component is null.");
             }
         }
     }
 
     void Flip()
     {
+        Debug.Log("Flipping character direction.");
         // Switch the way the enemy is facing.
         facingRight = !facingRight;
 
@@ -135,6 +154,7 @@ public class EnemyAI : MonoBehaviour
     {
         if (collision.collider.CompareTag("Ground"))
         {
+            Debug.Log("Collided with ground. Setting isGrounded to true.");
             isGrounded = true;
         }
     }
@@ -143,6 +163,7 @@ public class EnemyAI : MonoBehaviour
     {
         if (collision.collider.CompareTag("Ground"))
         {
+            Debug.Log("Exited collision with ground. Setting isGrounded to false.");
             isGrounded = false;
         }
     }
