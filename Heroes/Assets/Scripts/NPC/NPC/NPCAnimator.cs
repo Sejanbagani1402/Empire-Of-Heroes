@@ -68,8 +68,11 @@ public class NPCAnimator : MonoBehaviour
         {
             currentAnim.Update();
             transform.localScale = movingScale;
+            idealSprite = currentAnim.CurrentSprite;  // Store the current frame as the idle sprite
         }
         else
-            spriteRenderer.sprite = idealSprite;
+        {
+            spriteRenderer.sprite = idealSprite;  // Use the stored frame when idle
+        }
     }
 }

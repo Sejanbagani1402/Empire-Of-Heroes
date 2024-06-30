@@ -7,9 +7,11 @@ public class SpriteAnimator
     SpriteRenderer spriteRenderer;
     List<Sprite> frames;
     float frameRate;
-
+    int frameIndex;
     int currentFrame;
     float timer;
+
+    public Sprite CurrentSprite => frames[frameIndex];
 
     public List<Sprite> Frames => frames; // Property to access frames
 
