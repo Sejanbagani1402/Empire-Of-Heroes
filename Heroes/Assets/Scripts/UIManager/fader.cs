@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Fader : MonoBehaviour
 {
@@ -40,5 +41,12 @@ public class Fader : MonoBehaviour
     private IEnumerator FadeOut(float time)
     {
         yield return StartCoroutine(FadeTo(0f, time));
+    }
+    public IEnumerator FadeAndLoadScene(string sceneName, float fadeDuration)
+    {
+        yield return FadeIn(fadeDuration);
+        SceneManager.LoadScene(sceneName);
+        yield return new WaitForSeconds(1f); // Wait a second for the scene to load
+        yield return FadeOut(fadeDuration);
     }
 }
