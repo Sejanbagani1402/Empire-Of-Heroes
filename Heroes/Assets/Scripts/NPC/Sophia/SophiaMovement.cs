@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SophiaMovement : MonoBehaviour
@@ -9,6 +10,9 @@ public class SophiaMovement : MonoBehaviour
     private Rigidbody2D rb;  // Reference to the NPC's Rigidbody2D
     private Vector2 movement;  // Direction of movement
     private NPCAnimator npcAnimator;  // Reference to the NPCAnimator script
+    private bool isConversationStarted = false;
+
+    public DialogueTrigger dialogueTrigger;
 
     void Start()
     {
@@ -36,11 +40,23 @@ public class SophiaMovement : MonoBehaviour
 
             // Update NPCAnimator properties
             npcAnimator.IsMoving = false;
+            if (!isConversationStarted)
+            {
+                StartConversation();
+            }
         }
     }
 
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+    }
+    void StartConversation()
+    {
+        if(dialogueTrigger != null)
+        {
+            dialogueTrigger.StartDialoque();    
+            isConversationStarted = true;
+        }
     }
 }

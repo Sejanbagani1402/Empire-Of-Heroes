@@ -7,6 +7,12 @@ public class DialogueTrigger : MonoBehaviour
 {
     public Message[] messages;
     public Actor[] actors;
+
+    public void StartDialoque()
+    {
+        FindObjectOfType<DialogueManager>().openDialogue(messages,actors);    
+        
+    }
 }
 [System.Serializable]
 public class Message 
