@@ -55,7 +55,7 @@ public class SophiaMovement : MonoBehaviour
     {
         if(dialogueTrigger != null)
         {
-            dialogueTrigger.StartDialoque();    
+            dialogueTrigger.StartDialogue();    
             isConversationStarted = true;
         }
     }

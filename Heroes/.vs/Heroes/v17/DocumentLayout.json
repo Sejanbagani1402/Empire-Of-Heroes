@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|d:\\xscale\\hackathon\\gamedev\\unity_folder\\heroes\\assets\\scripts\\duels\\enemyai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\duels\\enemyai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|d:\\xscale\\hackathon\\gamedev\\unity_folder\\heroes\\assets\\scripts\\duels\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\duels\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\assets\\scripts\\npc\\sophia\\sophiamovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\npc\\sophia\\sophiamovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\assets\\scripts\\dialoges\\dialoguemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\dialoges\\dialoguemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\assets\\scripts\\npc\\sophia\\sophiamovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\npc\\sophia\\sophiamovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\assets\\scripts\\dialoges\\dialoguetrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\dialoges\\dialoguetrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|d:\\xscale\\hackathon\\gamedev\\unity_folder\\heroes\\assets\\scripts\\duels\\enemyai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\duels\\enemyai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\assets\\scripts\\duels\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\duels\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{966D4EE0-6862-7264-A2EB-B520AD0E798D}|Assembly-CSharp.csproj|D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\assets\\scripts\\npc\\camera\\camerafollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,11 +38,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "PlayerMovement.cs",
               "DocumentMoniker": "D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\Assets\\Scripts\\Duels\\PlayerMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Duels\\PlayerMovement.cs",
@@ -50,17 +50,16 @@
               "RelativeToolTip": "Assets\\Scripts\\Duels\\PlayerMovement.cs*",
               "ViewState": "AQIAAAsAAAAAAAAAAAAQwBUAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-01T23:29:23.858Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-01T23:29:23.858Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "EnemyAI.cs",
               "DocumentMoniker": "D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\Assets\\Scripts\\Duels\\EnemyAI.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Duels\\EnemyAI.cs",
-              "ToolTip": "D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\Assets\\Scripts\\Duels\\EnemyAI.cs*",
-              "RelativeToolTip": "Assets\\Scripts\\Duels\\EnemyAI.cs*",
+              "ToolTip": "D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\Assets\\Scripts\\Duels\\EnemyAI.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Duels\\EnemyAI.cs",
               "ViewState": "AQIAACQAAAAAAAAAAAAgwB4AAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-01T23:28:29.601Z",
@@ -68,39 +67,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "DialogueManager.cs",
               "DocumentMoniker": "D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\Assets\\Scripts\\Dialoges\\DialogueManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Dialoges\\DialogueManager.cs",
               "ToolTip": "D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\Assets\\Scripts\\Dialoges\\DialogueManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\Dialoges\\DialogueManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAnAAAA",
+              "ViewState": "AQIAAD4AAABgZ2ZmZmYqwEoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-30T08:38:35.289Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "DialogueTrigger.cs",
               "DocumentMoniker": "D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\Assets\\Scripts\\Dialoges\\DialogueTrigger.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Dialoges\\DialogueTrigger.cs",
               "ToolTip": "D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\Assets\\Scripts\\Dialoges\\DialogueTrigger.cs",
               "RelativeToolTip": "Assets\\Scripts\\Dialoges\\DialogueTrigger.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAADwvx4AAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-30T08:25:05.936Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "SophiaMovement.cs",
               "DocumentMoniker": "D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\Assets\\Scripts\\NPC\\Sophia\\SophiaMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\NPC\\Sophia\\SophiaMovement.cs",
               "ToolTip": "D:\\Xscale\\Hackathon\\GameDev\\Unity_folder\\Heroes\\Assets\\Scripts\\NPC\\Sophia\\SophiaMovement.cs",
               "RelativeToolTip": "Assets\\Scripts\\NPC\\Sophia\\SophiaMovement.cs",
-              "ViewState": "AQIAACkAAAAAAAAAAADwvzUAAAAcAAAA",
+              "ViewState": "AQIAADMAAACgmZmZmZknwDwAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-30T07:00:23.683Z",
               "EditorCaption": ""

@@ -1,29 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.VersionControl;
 using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
     public Message[] messages;
-    public Actor[] actors;
+    public Actor actor; // Single actor
 
-    public void StartDialoque()
+    public void StartDialogue()
     {
-        FindObjectOfType<DialogueManager>().openDialogue(messages,actors);    
-        
+        FindObjectOfType<DialogueManager>().openDialogue(messages, actor);
     }
 }
-[System.Serializable]
-public class Message 
-{
-    public int actorId;
-    public string message;
 
+[System.Serializable]
+public class Message
+{
+    public string message;
 }
 
 [System.Serializable]
-public class Actor 
+public class Actor
 {
     public string name;
     public Sprite sprite;

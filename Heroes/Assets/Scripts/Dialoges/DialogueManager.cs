@@ -10,64 +10,92 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI actorName;
     public TextMeshProUGUI messageText;
     public RectTransform backgroundBox;
+    public Button nextButton; // Reference to the button
 
     Message[] currentMessages;
-    Actor[] currentActors;
+    Actor currentActor; // Single actor
     int activeMessage = 0;
     public static bool isActive = false;
 
-    public void openDialogue(Message[] messages, Actor[] actors) 
+    void Start()
+    {
+        backgroundBox.transform.localScale = Vector3.zero;
+        nextButton.onClick.AddListener(OnNextButtonClicked); // Add listener for the button click
+        nextButton.gameObject.SetActive(false); // Hide the button initially
+    }
+
+    public void openDialogue(Message[] messages, Actor actor)
     {
         currentMessages = messages;
-        currentActors = actors;
+        currentActor = actor;
         activeMessage = 0;
         isActive = true;
         Debug.Log("Started conversation! Loaded Messages: " + messages.Length);
         DisplayMessage();
-        backgroundBox.LeanScale(Vector3.one, 0.5f);
+        backgroundBox.LeanScale(Vector3.one, 0.5f).setOnComplete(() =>
+        {
+            Debug.Log("Background box animation completed.");
+        });
+        nextButton.gameObject.SetActive(true); // Show the button when the dialogue starts
     }
+
     void DisplayMessage()
     {
-        Message messageToDisplay = currentMessages[activeMessage];
-        messageText.text = messageToDisplay.message;
+        if (activeMessage >= currentMessages.Length)
+        {
+            Debug.LogError("activeMessage index out of bounds: " + activeMessage);
+            return;
+        }
 
-        Actor actorToDisplay = currentActors[activeMessage];
-        actorName.text = actorToDisplay.name;
-        actorImage.sprite = actorToDisplay.sprite;
+        Message messageToDisplay = currentMessages[activeMessage];
+        Debug.Log("Displaying message " + activeMessage + ": " + messageToDisplay.message);
+
+        actorName.text = currentActor.name;
+        actorImage.sprite = currentActor.sprite;
+        messageText.text = messageToDisplay.message;
 
         AnimateTextColor();
     }
+
     void NextMessage()
     {
         activeMessage++;
-        if(activeMessage < currentMessages.Length)
+        if (activeMessage < currentMessages.Length)
         {
             DisplayMessage();
         }
         else
         {
             Debug.Log("Convo ended!!!");
-            backgroundBox.LeanScale(Vector3.one, 0.5f).setEaseInOutExpo();
             isActive = false;
+            nextButton.gameObject.SetActive(false); // Hide the button when the conversation ends
+            backgroundBox.LeanScale(Vector3.zero, 0.5f).setEaseInOutExpo(); // Scale down the background box
         }
     }
-    // Start is called before the first frame update
+
     void AnimateTextColor()
     {
         LeanTween.textAlpha(messageText.rectTransform, 0, 0);
-        LeanTween.textAlpha(messageText.rectTransform, 1, 0.5f);
+        LeanTween.textAlpha(messageText.rectTransform, 1, 0.5f).setOnComplete(() =>
+        {
+            Debug.Log("Text color animation completed.");
+        });
     }
 
-    void Start()
-    {
-        backgroundBox.transform.localScale = Vector3.zero;        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space) && isActive == true)
+        if (Input.GetKeyDown(KeyCode.Space) && isActive)
         {
+            Debug.Log("Space key pressed.");
+            NextMessage();
+        }
+    }
+
+    void OnNextButtonClicked()
+    {
+        if (isActive)
+        {
+            Debug.Log("Next button clicked.");
             NextMessage();
         }
     }
