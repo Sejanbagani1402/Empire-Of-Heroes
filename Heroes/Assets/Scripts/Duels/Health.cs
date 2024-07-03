@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.SceneManagement; // Add this line to use SceneManager
+using UnityEngine.SceneManagement; 
 
 public class Health : MonoBehaviour
 {
@@ -7,10 +7,13 @@ public class Health : MonoBehaviour
     private int currentHealth;
     private Animator animator;
 
+    public HealthBar healthBar;
+
     void Start()
     {
         animator = GetComponent<Animator>();
         currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     public int CurrentHealth
@@ -25,6 +28,7 @@ public class Health : MonoBehaviour
         {
             Die();
         }
+        healthBar.SetHealth(currentHealth);
     }
 
     void Die()
