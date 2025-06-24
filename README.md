@@ -32,7 +32,9 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="stars" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23stars)"/></svg>');
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1" fill="white"/></svg>');
+            background-size: 2px 2px;
+            opacity: 0.3;
             animation: twinkle 3s ease-in-out infinite alternate;
         }
         @keyframes twinkle {
@@ -371,19 +373,10 @@
             transition: width 0.1s ease;
         }
         @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.5rem;
-            }            
-            .nav-tabs {
-                flex-direction: column;
-                align-items: center;
-            }            
-            .player-types {
-                flex-direction: column;
-            }            
-            .section {
-                padding: 20px;
-            }
+            .hero-title { font-size: 2.5rem; }
+            .nav-tabs { flex-direction: column; align-items: center; }
+            .player-types { flex-direction: column; }
+            .section { padding: 20px; }
         }
     </style>
 </head>
@@ -391,26 +384,29 @@
     <div class="scroll-indicator">
         <div class="scroll-progress" id="scrollProgress"></div>
     </div>
+
     <div class="floating-elements" id="floatingElements"></div>
-    <div class="hero-section">
+
+    <section class="hero-section">
         <div class="hero-content">
             <h1 class="hero-title">⚔️ Empire of Heroes ⚔️</h1>
             <p class="hero-subtitle">A Dynamic 2D Strategy & Management Game</p>
             <p>Conquer territories, forge alliances, and dominate the world to accumulate the most <span class="game-token">💰 Game Tokens (GT)</span>!</p>
         </div>
-    </div>
+    </section>
+
     <div class="container">
-        <nav class="nav-tabs">
-            <button class="nav-tab active" data-section="overview">🏰 Overview</button>
-            <button class="nav-tab" data-section="gameplay">🎮 Gameplay</button>
-            <button class="nav-tab" data-section="players">👥 Players</button>
-            <button class="nav-tab" data-section="world">🗺️ World</button>
-            <button class="nav-tab" data-section="buildings">🏗️ Buildings</button>
-            <button class="nav-tab" data-section="combat">⚔️ Combat</button>
-            <button class="nav-tab" data-section="economy">💰 Economy</button>
-            <button class="nav-tab" data-section="mvp">🚀 MVP</button>
-        </nav>
-        <div class="section active" id="overview">
+        <div class="nav-tabs">
+            <button class="nav-tab active" data-section="overview">🏰 Game Overview</button>
+            <button class="nav-tab" data-section="gameplay">🎮 Gameplay Mechanics</button>
+            <button class="nav-tab" data-section="players">👥 Player Types</button>
+            <button class="nav-tab" data-section="world">🗺️ World & Resources</button>
+            <button class="nav-tab" data-section="combat">⚔️ Warriors & Combat</button>
+            <button class="nav-tab" data-section="economy">💰 Trade & Economy</button>
+            <button class="nav-tab" data-section="mvp">🚀 Current MVP</button>
+        </div>
+
+        <section id="overview" class="section active">
             <h2>🏰 Game Overview</h2>
             <div class="cards-grid">
                 <div class="card">
@@ -425,34 +421,39 @@
                     <h3>📱 Mobile-First Design</h3>
                     <p>Built for mobile gameplay, start with a humble village and a single warrior, then expand into a formidable kingdom.</p>
                 </div>
-            </div>            
+            </div>
+            
             <div class="stats-grid">
                 <div class="stat-card">
                     <span class="stat-number">5</span>
-                    <span>Game Views</span>
+                    <p>Game Views</p>
                 </div>
                 <div class="stat-card">
                     <span class="stat-number">2000</span>
-                    <span>Blocks per Country</span>
+                    <p>Blocks per Country</p>
                 </div>
                 <div class="stat-card">
                     <span class="stat-number">30+</span>
-                    <span>Building Types</span>
+                    <p>Building Types</p>
                 </div>
                 <div class="stat-card">
                     <span class="stat-number">∞</span>
-                    <span>Strategic Possibilities</span>
+                    <p>Strategic Possibilities</p>
                 </div>
             </div>
-        </div>
-        <div class="section" id="gameplay">
+        </section>
+
+        <section id="gameplay" class="section">
             <h2>🎮 Gameplay Mechanics</h2>
             <div class="interactive-map">
                 <h3>🗺️ Explore Different Map Layers</h3>
-                <div class="map-layer" data-layer="countries">🏛️ Countries</div>
-                <div class="map-layer" data-layer="regions">🌄 Regions</div>
-                <div class="map-layer" data-layer="openworld">🌍 Open World</div>
-            </div>            
+                <div class="map-layer" data-layer="Open World">Open World</div>
+                <div class="map-layer" data-layer="Fighting">Fighting</div>
+                <div class="map-layer" data-layer="Management">Management</div>
+                <div class="map-layer" data-layer="Regional">Regional</div>
+                <div class="map-layer" data-layer="Country">Country</div>
+            </div>
+            
             <div class="cards-grid">
                 <div class="card">
                     <h3>🏰 City Building</h3>
@@ -471,15 +472,16 @@
                     <p>Explore Pokémon-style dungeons inspired by Dofus. Discover unique resources and face challenging NPCs.</p>
                 </div>
             </div>
-        </div>
-        <div class="section" id="players">
+        </section>
+
+        <section id="players" class="section">
             <h2>👥 Player Types</h2>
             <div class="player-types">
                 <div class="player-type web2-player">
                     <h3>🌐 Web2 Players</h3>
-                    <p><strong>Signup:</strong> Email & Password</p>
-                    <p><strong>Starting Resources:</strong></p>
-                    <ul style="text-align: left; margin-top: 15px;">
+                    <p>Signup: Email & Password</p>
+                    <p>Starting Resources:</p>
+                    <ul style="text-align: left; margin-top: 10px;">
                         <li>Game Tokens (GT)</li>
                         <li>Wood & Stone</li>
                         <li>2-3 Houses (2 NPCs each)</li>
@@ -487,75 +489,51 @@
                 </div>
                 <div class="player-type web3-player">
                     <h3>🔗 Web3 Players</h3>
-                    <p><strong>Special Access:</strong> Management Dashboard</p>
-                    <p><strong>Capabilities:</strong></p>
-                    <ul style="text-align: left; margin-top: 15px;">
+                    <p>Special Access: Management Dashboard</p>
+                    <p>Capabilities:</p>
+                    <ul style="text-align: left; margin-top: 10px;">
                         <li>Country-level management</li>
                         <li>Advanced economic controls</li>
                         <li>Enhanced trading features</li>
                     </ul>
                 </div>
             </div>
-        </div>
-        <div class="section" id="world">
+        </section>
+
+        <section id="world" class="section">
             <h2>🗺️ World & Resources</h2>
-            <div class="cards-grid">
-                <div class="card">
-                    <h3>🏛️ Countries</h3>
-                    <p>Equal octagon-shaped territories with 2000 blocks each. Each country has unique raw material distributions.</p>
-                </div>
-                <div class="card">
-                    <h3>🌄 Regions</h3>
-                    <p>Sets of blocks where players establish villages and exploit local resources based on terrain type.</p>
-                </div>
-            </div>            
-            <h3 style="text-align: center; margin: 30px 0; color: #1a1a2e;">🌿 Raw Materials</h3>
+            <div class="card">
+                <h3>🏛️ Countries</h3>
+                <p>Equal octagon-shaped territories with 2000 blocks each. Each country has unique raw material distributions.</p>
+            </div>
+            <div class="card">
+                <h3>🌄 Regions</h3>
+                <p>Sets of blocks where players establish villages and exploit local resources based on terrain type.</p>
+            </div>
+            
+            <h3>🌿 Raw Materials</h3>
             <div class="resources-grid">
-                <div class="resource-item">🌳 Wood</div>
-                <div class="resource-item">🍞 Food</div>
-                <div class="resource-item">🐄 Cattle</div>
-                <div class="resource-item">🗿 Stone</div>
+                <div class="resource-item">Wood</div>
+                <div class="resource-item">Stone</div>
+                <div class="resource-item">Iron</div>
+                <div class="resource-item">Gold</div>
+                <div class="resource-item">Food</div>
+                <div class="resource-item">Gems</div>
             </div>
-        </div>
-        <div class="section" id="buildings">
-            <h2>🏗️ Buildings & Infrastructure</h2>
-            <p style="text-align: center; margin-bottom: 30px; font-size: 1.2rem;">Choose from over 30 different building types to customize your empire!</p>            
+            
+            <h3>🏗️ Buildings & Infrastructure</h3>
+            <p>Choose from over 30 different building types to customize your empire!</p>
             <div class="buildings-grid">
-                <div class="building-item">🏫 School</div>
-                <div class="building-item">⚒️ Blacksmith</div>
-                <div class="building-item">🏪 Market</div>
-                <div class="building-item">🏦 Bank</div>
-                <div class="building-item">🍺 Tavern</div>
-                <div class="building-item">⛪ Church</div>
-                <div class="building-item">🏰 Barracks</div>
-                <div class="building-item">🏥 Hospital</div>
-                <div class="building-item">📚 Library</div>
-                <div class="building-item">🏛️ Town Hall</div>
-                <div class="building-item">🏨 Inn</div>
-                <div class="building-item">🐎 Stables</div>
-                <div class="building-item">⚓ Dock</div>
-                <div class="building-item">🪵 Lumber Mill</div>
-                <div class="building-item">⛏️ Mine</div>
-                <div class="building-item">🏔️ Quarry</div>
-                <div class="building-item">🌾 Farm</div>
-                <div class="building-item">🐟 Fishery</div>
-                <div class="building-item">🏹 Hunter's Hut</div>
-                <div class="building-item">🥖 Bakery</div>
-                <div class="building-item">🍺 Brewery</div>
-                <div class="building-item">🏛️ Guild Hall</div>
-                <div class="building-item">🏟️ Arena</div>
-                <div class="building-item">⛓️ Prison</div>
-                <div class="building-item">⚰️ Graveyard</div>
-                <div class="building-item">🗼 Watch Tower</div>
-                <div class="building-item">🧱 Wall</div>
-                <div class="building-item">🚪 Gate</div>
-                <div class="building-item">🛣️ Road</div>
-                <div class="building-item">🌉 Bridge</div>
-                <div class="building-item">🚢 Shipyard</div>
-                <div class="building-item">🧙 Wizard Tower</div>
+                <div class="building-item">Village Hall</div>
+                <div class="building-item">Market</div>
+                <div class="building-item">Barracks</div>
+                <div class="building-item">Farm</div>
+                <div class="building-item">Mine</div>
+                <div class="building-item">Warehouse</div>
             </div>
-        </div>
-        <div class="section" id="combat">
+        </section>
+
+        <section id="combat" class="section">
             <h2>⚔️ Warriors & Combat</h2>
             <div class="cards-grid">
                 <div class="card">
@@ -575,8 +553,9 @@
                     <p>Form guilds for group inventory, sales, and coordinated warfare. Engage in conflicts between players, villages, and entire countries.</p>
                 </div>
             </div>
-        </div>
-        <div class="section" id="economy">
+        </section>
+
+        <section id="economy" class="section">
             <h2>💰 Trade & Economy</h2>
             <div class="cards-grid">
                 <div class="card">
@@ -585,7 +564,8 @@
                 </div>
                 <div class="card">
                     <h3>💎 Dual Currency System</h3>
-                    <p><strong>Game Token (GT):</strong> Primary in-game currency<br><strong>Player Token (PT):</strong> Tradeable currency for country ownership</p>
+                    <p>Game Token (GT): Primary in-game currency<br>
+                    Player Token (PT): Tradeable currency for country ownership</p>
                 </div>
                 <div class="card">
                     <h3>💼 Country Ownership</h3>
@@ -596,13 +576,15 @@
                     <p>Carefully balanced economic system with management fees to maintain stability and fair gameplay.</p>
                 </div>
             </div>
-        </div>
-        <div class="section" id="mvp">
+        </section>
+
+        <section id="mvp" class="section">
             <h2>🚀 Current MVP Features</h2>
+            <p>MVP Progress: 75% Complete</p>
             <div class="progress-bar">
                 <div class="progress-fill" style="width: 75%"></div>
             </div>
-            <p style="text-align: center; margin-bottom: 30px;">MVP Progress: 75% Complete</p>            
+            
             <div class="cards-grid">
                 <div class="card">
                     <h3>🗺️ World Structure</h3>
@@ -621,23 +603,28 @@
                     <p>Four tradeable resources on the market with GT & PT currencies fully implemented.</p>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
+
     <script>
         // Tab switching functionality
         const tabs = document.querySelectorAll('.nav-tab');
         const sections = document.querySelectorAll('.section');
+        
         tabs.forEach(tab => {
             tab.addEventListener('click', () => {
-                const targetSection = tab.dataset.section;                
+                const targetSection = tab.dataset.section;
+                
                 // Remove active class from all tabs and sections
                 tabs.forEach(t => t.classList.remove('active'));
-                sections.forEach(s => s.classList.remove('active'));                
+                sections.forEach(s => s.classList.remove('active'));
+                
                 // Add active class to clicked tab and corresponding section
                 tab.classList.add('active');
                 document.getElementById(targetSection).classList.add('active');
             });
         });
+
         // Scroll progress indicator
         window.addEventListener('scroll', () => {
             const scrollProgress = document.getElementById('scrollProgress');
@@ -646,10 +633,12 @@
             const scrollPercent = (scrollTop / docHeight) * 100;
             scrollProgress.style.width = scrollPercent + '%';
         });
+
         // Floating elements animation
         function createFloatingElements() {
             const container = document.getElementById('floatingElements');
-            const elements = ['⚔️', '🏰', '💰', '🗡️', '🛡️', '👑', '🏹', '🔮'];            
+            const elements = ['⚔️', '🏰', '💰', '🗡️', '🛡️', '👑', '🏹', '🔮'];
+            
             for (let i = 0; i < 20; i++) {
                 const element = document.createElement('div');
                 element.className = 'floating-element';
@@ -661,24 +650,38 @@
                 container.appendChild(element);
             }
         }
+        
         // Interactive map layers
         const mapLayers = document.querySelectorAll('.map-layer');
         mapLayers.forEach(layer => {
             layer.addEventListener('click', () => {
-                const layerType = layer.dataset.layer;                
+                const layerType = layer.dataset.layer;
+                
                 // Remove active state from all layers
-                mapLayers.forEach(l => l.style.background = 'rgba(255,255,255,0.1)');                
+                mapLayers.forEach(l => l.style.background = 'rgba(255,255,255,0.1)');
+                
                 // Highlight clicked layer
-                layer.style.background = 'rgba(116, 185, 255, 0.3)';                
+                layer.style.background = 'rgba(116, 185, 255, 0.3)';
+                
                 // You could add more interactive functionality here
                 console.log(`Exploring ${layerType} layer...`);
             });
         });
+
         // Add hover effects to cards
         const cards = document.querySelectorAll('.card, .building-item, .resource-item');
         cards.forEach(card => {
             card.addEventListener('mouseenter', () => {
                 card.style.transform = 'translateY(-5px) scale(1.02)';
-            });            
+            });
+            
             card.addEventListener('mouseleave', () => {
-                card.style.transform
+                card.style.transform = '';
+            });
+        });
+
+        // Initialize floating elements
+        createFloatingElements();
+    </script>
+</body>
+</html>
